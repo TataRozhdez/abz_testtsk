@@ -1,0 +1,255 @@
+@import '~bootstrap/scss/bootstrap';
+@import './variables';
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(./OpenSans-Regular.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open-Sans', sans-serif !important;
+  font-weight: 400;
+  width: 100vw;
+  overflow-x: hidden;
+  animation: fadeIn 2s linear;
+
+  h1 {
+    font-weight: 400;
+    font-size: 3.125rem;
+    line-height: 3.375rem;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+  }
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1 5rem;
+  }
+
+  @media (max-width: 769px) {
+    h1 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+  }
+  @media (max-width: 360px) {
+    h1 {
+      font-weight: 400;
+      font-size: 1.875rem;
+      line-height: 2.125rem;
+    }
+  }
+
+  .alert {
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+  }
+
+  .plug {
+    z-index: 9999;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #0000008f;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .btn-primary:hover,
+  .btn-primary.focus,
+  .btn-primary:focus,
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .btn-primary:active {
+    color: #fff;
+    box-shadow: none !important;
+    background-color: $primary-color-hovered;
+    border-color: $primary-color-hovered;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .card,
+  .card-body {
+    width: 13.5rem;
+    background-color: inherit;
+    border: none;
+    animation: fadeIn 2s linear;
+
+    img {
+      width: 5.25rem;
+    }
+
+    p {
+      margin: 0 0 0.75rem;
+    }
+  }
+
+  .card-email {
+    position: relative;
+
+    & input[type='text'] {
+      opacity: 0;
+    }
+
+    label {
+      position: absolute;
+      cursor: pointer;
+      left: 0;
+      top: 0;
+      width: 13.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0 5px;
+    }
+  }  
+
+  .card-body {
+    padding: 1.5rem 0;
+  }
+
+  .card-text {
+    margin-bottom: 0.9375rem;
+  }
+
+  .card-title.h5 {
+    word-wrap: break-word;
+    margin-bottom: 1.5rem;
+  }
+
+  .mob-none {
+    @media (max-width: 478px) {
+      display: none;
+    }
+  }
+}
+
+.nav-link {
+  color: #212529 !important;
+
+  &.active {
+    color: $secondary-color !important;
+  }
+  &:hover {
+    color: $primary-color !important;
+  }
+}
+
+.navbar-light .navbar-toggler {
+  border: none !important; 
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url('./img/menu.svg') !important;
+}
+
+#about {
+  width: 100%;
+  min-height: 90vh;
+  background: center / cover no-repeat url('./img/banner-photo.webp');
+
+  @media (max-width: 478px) {
+    text-align: center;
+
+    p {
+      width: 100% !important;
+    }
+  }
+}
+
+#relations {
+  width: 100%;
+  min-height: 90vh;
+
+  img {
+    max-height: 17.8125rem;
+  }
+
+  a {
+    color: $primary-color;
+  }
+
+  a:hover,
+  a:active {
+    color: $primary-color-hovered;
+    text-decoration: none;
+  }
+
+  @media (max-width: 478px) {
+    div {
+      flex-direction: column !important;
+      align-items: center;
+      width: 100% !important;
+      margin-left: 0 !important;
+
+      h2 {
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+#users {
+  background-color: $bck2;
+  min-height: 90vh;
+  width: 100%;
+}
+
+#register {
+  min-height: 90vh;
+  width: 100%;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+
+  a {
+    color: inherit;
+    text-decoration: none; 
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
